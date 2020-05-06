@@ -1,5 +1,5 @@
-# `<input type="toggle" />`
-A toggle switch HTML &lt;form&rt; control, built from a ``<input type="checkbox" />``.
+# `<input type="toggle">`
+A toggle switch HTML &lt;form&rt; control, built from a ``<input type="checkbox">``.
 
 ## HTML
 ```
