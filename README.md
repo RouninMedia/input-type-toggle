@@ -65,7 +65,9 @@ display: none;
   height: var(--switch-height);
   margin-left: var(--toggle-padding);
   background-color: rgb(255, 255, 255);
+  border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
+  box-sizing: border-box;
   transition: all 0.4s ease-out;
 }
 
