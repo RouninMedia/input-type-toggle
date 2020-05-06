@@ -19,6 +19,8 @@ ________
 <input type="checkbox" />
 <span class="checkboxToggleSwitch"></span>
 </label>
+
+<p>The <code>&lt;input type="toggle" /&gt;</code> is currently switched <strong data-checkbox-status="off">off</strong>.</p>
 ```
 
 ### CSS
