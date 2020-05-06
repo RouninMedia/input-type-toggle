@@ -1,8 +1,15 @@
 # `<input type="toggle">`
 A toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
 
+______
+
+## Working Example of `<input type="toggle">`
+
 See a working example of <a href="https://htmlpreview.github.io/?https://github.com/RouninMedia/input-type-toggle/blob/master/input-type-toggle.html" title="https://htmlpreview.github.io/?https://github.com/RouninMedia/input-type-toggle/blob/master/input-type-toggle.html" target="_blank">`<input type="toggle">`</a>.
 
+________
+
+## Build your own `<input type="toggle">`
 
 **N.B.** The `<input type="toggle">` makes good use of _CSS Custom Properties_ which are all initially declared at the top of the stylesheet and which may be customised.
 
