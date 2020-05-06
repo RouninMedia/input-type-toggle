@@ -57,4 +57,5 @@ display: none;
 
 .checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch::before {
   transform: translateX(var(--switch-slide));
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
