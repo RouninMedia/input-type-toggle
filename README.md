@@ -1,4 +1,4 @@
-# `<input type="toggle">`
+# <input type="toggle">
 A toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
 
 ______
