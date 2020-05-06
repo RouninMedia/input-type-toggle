@@ -46,6 +46,10 @@ display: none;
   transition: all 0.4s ease-out;
 }
 
+.checkboxToggleSwitch:hover::before {
+  border: 2px solid rgba(191, 0, 0, 0.5);
+}
+
 .checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch {
   background-color: rgb(255, 0, 0);
   box-shadow: 0 0 2px rgba(191, 0, 0, 1);
