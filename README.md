@@ -1,5 +1,7 @@
 # `<input type="toggle">`
-A toggle switch HTML `<form>` control, built from a ``<input type="checkbox">``.
+A toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
+
+The `<input type="toggle">` makes good use of _CSS Custom Properties_ which are all initially declared at the top of the stylesheet and may be customised.
 
 ## HTML
 ```
