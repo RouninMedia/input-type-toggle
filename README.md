@@ -13,7 +13,7 @@ ________
 
 **N.B.** The `<input type="toggle">` makes good use of _CSS Custom Properties_ which are all initially declared at the top of the stylesheet and which may be customised.
 
-## HTML
+### HTML
 ```
 <label class="checkboxToggle">
 <input type="checkbox" />
@@ -21,7 +21,7 @@ ________
 </label>
 ```
 
-## CSS
+### CSS
 ```
 .checkboxToggle {
   --toggle-width: 60px;
@@ -79,7 +79,7 @@ display: none;
 }
 ```
 
-## Javascript
+### Javascript
 ```
 const toggleCheckbox = document.querySelector('.checkboxToggle input[type="checkbox"]');
 
