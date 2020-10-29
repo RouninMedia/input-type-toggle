@@ -1,7 +1,7 @@
 .checkboxToggle {
   --toggle-width: 60px;
   --toggle-height: 34px;
-  --toggle-padding: 0;
+  --toggle-padding: 1px;
   --switch-height: calc(var(--toggle-height) - (var(--toggle-padding) * 4));
   --switch-slide: calc(var(--toggle-width) - var(--switch-height) - (var(--toggle-padding) * 4));
 }
