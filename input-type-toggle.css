@@ -38,12 +38,11 @@ display: none;
   content: '';
   width: var(--switch-height);
   height: var(--switch-height);
-  margin-left: var(--toggle-padding);
+  margin-left: 0;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   box-sizing: border-box;
-  transform: translateX(-2px);
   transition: all 0.4s ease-out;
 }
 
