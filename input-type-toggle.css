@@ -43,7 +43,7 @@ display: none;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   box-sizing: border-box;
-  transform: translateX(-4px);
+  transform: translateX(-2px);
   transition: all 0.4s ease-out;
 }
 
