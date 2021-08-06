@@ -30,7 +30,7 @@ ________
   --toggle-height: 34px;
   --toggle-padding: 1px;
   --switch-height: calc(var(--toggle-height) - (var(--toggle-padding) * 4));
-  --switch-slide: calc(var(--toggle-width) - var(--switch-height) - (var(--toggle-padding) * 4));
+  --switch-slide: calc(var(--toggle-width) - var(--switch-height) - (var(--toggle-padding) * 4) + 3px);
 }
 
 .checkboxToggle input[type="checkbox"] {
@@ -65,7 +65,7 @@ display: none;
   content: '';
   width: var(--switch-height);
   height: var(--switch-height);
-  margin-left: var(--toggle-padding);
+  margin-left: 0;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -73,13 +73,19 @@ display: none;
   transition: all 0.4s ease-out;
 }
 
+.checkboxToggleSwitch:hover::before {
+  border: 2px solid rgba(191, 0, 0, 0.5);
+}
+
 .checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch {
   background-color: rgb(255, 0, 0);
+  border: 1px solid rgba(229, 0, 0, 1);
   box-shadow: 0 0 2px rgba(191, 0, 0, 1);
 }
 
 .checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch::before {
   transform: translateX(var(--switch-slide));
+  border: 2px solid rgba(229, 0, 0, 1);
 }
 ```
 
