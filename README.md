@@ -1,7 +1,7 @@
 
 # `<input type="toggle">`
 
-There are two versions of the `<input type="toggle">` below:
+There are *two versions* of the `<input type="toggle">` below:
 
  1) WebComponent Version of `<input type="toggle">`
  2) Original Version of `<input type="toggle">`
