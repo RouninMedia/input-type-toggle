@@ -14,6 +14,8 @@ This version of the **toggle input** (`<toggle-input position="off">`) is a mode
 
 The `<toggle-input>` WebComponent fully encapsulates its own Markup, Styles and Scripts.
 
+One significant advantage of the **WebComponent Version** is that the initial `position` can be set to `on` via the HTML attribute, instead of always initialising in an `off` position. 
+
 #### HTML
 ```
 <toggle-input position="off"></toggle-input>
