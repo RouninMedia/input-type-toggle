@@ -114,6 +114,22 @@ class toggleInput_Element extends HTMLElement {
 
     this.root.appendChild(toggleInputStyles);
     this.root.appendChild(toggleInputLabel);
+    
+    const initialiseTogglePosition = () => {
+    
+      const initialPosition = this.getAttribute('position');
+      toggleInputInput.checked = (initialPosition === 'on') ? true : false;
+    }    
+    
+    const checkTogglePosition = () => {
+    
+      const currentPosition = this.getAttribute('position');
+      const newPosition = (currentPosition === 'off') ? 'on' : 'off';
+      this.setAttribute('position', newPosition);
+    }
+    
+    toggleInputInput.addEventListener('change', checkTogglePosition, false);
+    window.addEventListener('load', initialiseTogglePosition, false);
   }
 }
 
