@@ -6,12 +6,13 @@ A toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
 There are two versions of the `<input type="toggle">` below:
 
  1) WebComponent Version of `<input type="toggle">`
- 2) Original version of `<input type="toggle">`
+ 2) Original Version of `<input type="toggle">`
 
 ______
 
 ## WebComponent Version of `<input type="toggle">`
 
+______
 ______
 
 ## Original Version of `<input type="toggle">`
