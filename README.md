@@ -1,5 +1,5 @@
 
-# Toggle Input
+# `<input type="toggle">`
 
 There are *two versions* of the **toggle input** below:
 
