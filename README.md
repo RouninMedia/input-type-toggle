@@ -1,7 +1,5 @@
 
-
 # input type="toggle"
-A toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
 
 There are two versions of the `<input type="toggle">` below:
 
@@ -16,6 +14,8 @@ ______
 ______
 
 ## Original Version of `<input type="toggle">`
+
+The Original Version of the `<input type="toggle">` is a toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
 
 ### Working Example of `<input type="toggle">`
 
