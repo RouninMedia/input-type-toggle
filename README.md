@@ -1,5 +1,5 @@
 
-# input type="toggle"
+# `<input type="toggle">`
 
 There are two versions of the `<input type="toggle">` below:
 
@@ -9,6 +9,14 @@ There are two versions of the `<input type="toggle">` below:
 ______
 
 ## WebComponent Version of `<input type="toggle">`
+
+#### HTML
+```
+<toggle-input position="off"></toggle-input>
+
+<p>The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-checkbox-status="off">off</strong>.</p>
+```
+
 
 ______
 ______
