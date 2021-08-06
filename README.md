@@ -10,7 +10,9 @@ ______
 
 ## WebComponent Version: `<toggle-input position="off">`
 
-The WebComponent Version of the **toggle input** (`<toggle-input position="off">`) is a WebComponent, fully encapsulating its own Markup, Styles and Scripts.
+The WebComponent Version of the **toggle input** (`<toggle-input position="off">`) is a modern WebComponent.
+
+The `<toggle-input>` fully encapsulates its own Markup, Styles and Scripts.
 
 #### HTML
 ```
