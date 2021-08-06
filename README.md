@@ -8,22 +8,24 @@ There are *two versions* of the **toggle input** below:
 
 ______
 
-## WebComponent Version of `<input type="toggle">`
+## WebComponent Version: `<toggle-input position="off">`
+
+The WebComponent Version of the **toggle input** (`<toggle-input position="off">`) is a WebComponent fully encapsulating its own Markup, Styles and Scripts.
 
 #### HTML
 ```
 <toggle-input position="off"></toggle-input>
 
-<p>The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-checkbox-status="off">off</strong>.</p>
+<p>The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-toggle-position="off">off</strong>.</p>
 ```
 
 
 ______
 ______
 
-## Original Version of `<input type="toggle">`
+## Original Version: `<input type="toggle">`
 
-The Original Version of the `<input type="toggle">` is a toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
+The Original Version of the **toggle input** (`<input type="toggle">`) is a toggle switch HTML `<form>` control, built from a `<input type="checkbox">`.
 
 ### Working Example of `<input type="toggle">`
 
