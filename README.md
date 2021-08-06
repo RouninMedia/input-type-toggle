@@ -3,7 +3,7 @@
 
 There are *two versions* of the **toggle input** below:
 
- 1) WebComponent Version: `<toggle-input position="off"></toggle-input>`
+ 1) WebComponent Version: `<toggle-input position="off">`
  2) Original Version: `<input type="toggle">`
 
 ______
