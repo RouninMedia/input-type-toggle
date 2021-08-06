@@ -145,7 +145,9 @@ class toggleInput_Element extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
    
-  if (oldValue !== null) {    this.root.querySelector('input[type="checkbox"]').checked = (newValue === 'on') ? true : false;
+    if (oldValue !== null) {
+    
+      this.root.querySelector('input[type="checkbox"]').checked = (newValue === 'on') ? true : false;
     }
   }
 }
