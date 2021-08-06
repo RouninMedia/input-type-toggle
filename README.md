@@ -20,6 +20,8 @@ One significant advantage of the **WebComponent Version** is that the initial `p
 ```
 <toggle-input position="off"></toggle-input>
 
+<button type="button">Click Me</button>
+
 <p>The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-toggle-position="off">off</strong>.</p>
 ```
 
@@ -29,7 +31,7 @@ class toggleInput_Element extends HTMLElement {
 
   constructor() {
     super();
-    this.root = this.attachShadow({mode: "open"});
+    this.root = this.attachShadow({mode: 'open'});
   }
 
   connectedCallback() {
@@ -37,9 +39,9 @@ class toggleInput_Element extends HTMLElement {
     const toggleInputLabel = document.createElement('label');
     toggleInputLabel.classList.add('checkboxToggle');
     
-    const toggleInputInput = document.createElement('input');
-    toggleInputInput.setAttribute('type', 'checkbox');
-    toggleInputLabel.appendChild(toggleInputInput);
+    const toggleInputCheckbox = document.createElement('input');
+    toggleInputCheckbox.setAttribute('type', 'checkbox');
+    toggleInputLabel.appendChild(toggleInputCheckbox);
     
     const toggleInputSpan = document.createElement('span');
     toggleInputSpan.classList.add('checkboxToggleSwitch');
@@ -117,10 +119,15 @@ class toggleInput_Element extends HTMLElement {
     this.root.appendChild(toggleInputStyles);
     this.root.appendChild(toggleInputLabel);
     
+    const test = () => {
+
+      window.alert('Test Successful');
+    }
+    
     const initialiseTogglePosition = () => {
     
       const initialPosition = this.getAttribute('position');
-      toggleInputInput.checked = (initialPosition === 'on') ? true : false;
+      toggleInputCheckbox.checked = (initialPosition === 'on') ? true : false;
     }    
     
     const updateTogglePosition = () => {
@@ -130,12 +137,32 @@ class toggleInput_Element extends HTMLElement {
       this.setAttribute('position', newPosition);
     }
     
-    toggleInputInput.addEventListener('change', updateTogglePosition, false);
+    toggleInputCheckbox.addEventListener('change', updateTogglePosition, false);
     window.addEventListener('load', initialiseTogglePosition, false);
+  }
+  
+  static get observedAttributes() { return ['position']; }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+   
+  if (oldValue !== null) {    this.root.querySelector('input[type="checkbox"]').checked = (newValue === 'on') ? true : false;
+    }
   }
 }
 
 customElements.define('toggle-input', toggleInput_Element);
+
+const button = document.getElementsByTagName('button')[0];
+
+const clickButton = () => {
+
+  const toggleInput = document.getElementsByTagName('toggle-input')[0];
+  const currentPosition = toggleInput.getAttribute('position');
+  const newPosition = (currentPosition === 'off') ? 'on' : 'off';
+  toggleInput.setAttribute('position', newPosition);
+}
+
+button.addEventListener('click', clickButton, false);
 ```
 
 
