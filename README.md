@@ -26,7 +26,7 @@ One significant advantage of the **WebComponent Version** is that the initial `p
 ```
 
 #### Javascript
-```
+```javascript
 class toggleInput_Element extends HTMLElement {
 
   constructor() {
