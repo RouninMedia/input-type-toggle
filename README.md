@@ -119,12 +119,18 @@ class toggleInput_Element extends HTMLElement {
     this.root.appendChild(toggleInputStyles);
     this.root.appendChild(toggleInputLabel);
     
+    
+    // INITIALISE TOGGLE POSITION ACCORDING TO INITIAL VALUE OF position="" ATTRIBUTE
     const initialiseTogglePosition = () => {
     
       const initialPosition = this.getAttribute('position');
       toggleInputCheckbox.checked = (initialPosition === 'on') ? true : false;
-    }    
+    }
     
+    window.addEventListener('load', initialiseTogglePosition, false);
+    
+    
+    // UPDATE position="" ATTRIBUTE VALUE WHENEVER CHECKBOX IS CHECKED OR UNCHECKED 
     const updatePositionAttribute = () => {
     
       const currentPosition = this.getAttribute('position');
@@ -133,9 +139,10 @@ class toggleInput_Element extends HTMLElement {
     }
     
     toggleInputCheckbox.addEventListener('change', updatePositionAttribute, false);
-    window.addEventListener('load', initialiseTogglePosition, false);
   }
   
+  
+  // OBSERVE INTERNALLY WHEN VALUE OF position="" ATTRIBUTE CHANGES
   static get observedAttributes() { return ['position']; }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -149,6 +156,9 @@ class toggleInput_Element extends HTMLElement {
 
 customElements.define('toggle-input', toggleInput_Element);
 
+
+
+// ACTIVATE BUTTON WHICH OPERATES <toggle-input> EXTERNALLY
 const button = document.getElementsByTagName('button')[0];
 
 const clickButton = () => {
@@ -162,6 +172,8 @@ const clickButton = () => {
 button.addEventListener('click', clickButton, false);
 
 
+
+// OBSERVE EXTERNALLY WHEN VALUE OF position="" ATTRIBUTE CHANGES
 const toggleInput = document.querySelector('toggle-input');
 
 const updateDescription = () => {
