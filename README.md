@@ -22,7 +22,7 @@ One significant advantage of the **WebComponent Version** is that the initial `p
 
 <button type="button">Click Me</button>
 
-<p>The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-toggle-position="off">off</strong>.</p>
+<p class="description">The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-toggle-position="off">off</strong>.</p>
 ```
 
 #### Javascript
@@ -160,6 +160,25 @@ const clickButton = () => {
 }
 
 button.addEventListener('click', clickButton, false);
+
+
+const toggleInput = document.querySelector('toggle-input');
+
+const updateDescription = () => {
+
+  const togglePositionDescription = document.querySelector('.description [data-toggle-position]');
+  
+  let togglePositionDescriptionData = togglePositionDescription.dataset.togglePosition;
+
+  const toggleInputPosition = toggleInput.getAttribute('position');
+  
+   togglePositionDescriptionData = (toggleInputPosition === 'on') ? 'on' : 'off';
+    
+    togglePositionDescription.textContent = togglePositionDescriptionData;
+}
+
+let observer = new MutationObserver(updateDescription);
+observer.observe(toggleInput, {attributes: true});
 ```
 
 
