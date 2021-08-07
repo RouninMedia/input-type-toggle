@@ -17,7 +17,7 @@ The `<toggle-input>` WebComponent fully encapsulates its own Markup, Styles and 
 One significant advantage of the **WebComponent Version** is that the initial `position` can be set to `on` via the HTML attribute, instead of always initialising in an `off` position. 
 
 #### HTML
-```
+```html
 <toggle-input position="off"></toggle-input>
 
 <button type="button">Click Me</button>
@@ -212,7 +212,7 @@ ________
 **N.B.** The `<input type="toggle">` makes good use of _CSS Custom Properties_ which are all initially declared at the top of the stylesheet and which may be customised.
 
 #### HTML
-```
+```html
 <label class="checkboxToggle">
 <input type="checkbox" />
 <span class="checkboxToggleSwitch"></span>
@@ -222,7 +222,7 @@ ________
 ```
 
 #### CSS
-```
+```css
 .checkboxToggle {
   --toggle-width: 60px;
   --toggle-height: 34px;
@@ -288,7 +288,7 @@ display: none;
 ```
 
 #### Javascript
-```
+```javascript
 const toggleCheckbox = document.querySelector('.checkboxToggle input[type="checkbox"]');
 
 const reviewCheckboxStatus = () => {
