@@ -1,10 +1,12 @@
 
 # `<input type="toggle">`
 
-There are *two versions* of the **toggle input** below:
+There are *four versions* of the **toggle input** below:
 
- 1) WebComponent Version: `<toggle-input position="off">`
- 2) Original Version: `<input type="toggle">`
+ 1) Newer WebComponent Version with Declarative Shadow Root: `<toggle-input position="off">`
+ 2) Standard WebComponent Version: `<toggle-input position="off">`
+ 3) `DaNIS³H Module` Version: `<input type="toggle">` (purely as a showcase - this would probably never be used instead of a WebComponent)
+ 4) Original plain `HTML` Version: `<input type="toggle">`
 
 ______
 
