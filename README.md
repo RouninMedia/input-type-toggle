@@ -119,11 +119,6 @@ class toggleInput_Element extends HTMLElement {
     this.root.appendChild(toggleInputStyles);
     this.root.appendChild(toggleInputLabel);
     
-    const test = () => {
-
-      window.alert('Test Successful');
-    }
-    
     const initialiseTogglePosition = () => {
     
       const initialPosition = this.getAttribute('position');
