@@ -33,7 +33,7 @@ class toggleInput_Element extends HTMLElement {
 
   constructor() {
     super();
-    this.root = this.attachShadow({mode: 'open'});
+    this.attachShadow({mode: 'open'});
   }
 
   connectedCallback() {
@@ -118,8 +118,8 @@ class toggleInput_Element extends HTMLElement {
     toggleInputStyles.textContent += 'border: 2px solid rgba(229, 0, 0, 1);';
     toggleInputStyles.textContent += '}';
 
-    this.root.appendChild(toggleInputStyles);
-    this.root.appendChild(toggleInputLabel);
+    this.shadowRoot.appendChild(toggleInputStyles);
+    this.shadowRoot.appendChild(toggleInputLabel);
     
     
     // INITIALISE TOGGLE POSITION ACCORDING TO INITIAL VALUE OF position="" ATTRIBUTE
@@ -151,7 +151,7 @@ class toggleInput_Element extends HTMLElement {
    
     if (oldValue !== null) {
     
-      this.root.querySelector('input[type="checkbox"]').checked = (newValue === 'on') ? true : false;
+      this.shadowRoot.querySelector('input[type="checkbox"]').checked = (newValue === 'on') ? true : false;
     }
   }
 }
