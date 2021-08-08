@@ -44,110 +44,115 @@ class toggleInput_Element extends HTMLElement {
   }
 
   connectedCallback() {
-    
-    const toggleInputLabel = document.createElement('label');
+
+    const renderShadow = () => {
+
+      const toggleInputLabel = document.createElement('label');
     toggleInputLabel.classList.add('checkboxToggle');
     
-    const toggleInputCheckbox = document.createElement('input');
-    toggleInputCheckbox.setAttribute('type', 'checkbox');
-    toggleInputLabel.appendChild(toggleInputCheckbox);
+      const toggleInputCheckbox = document.createElement('input');
+      toggleInputCheckbox.setAttribute('type', 'checkbox');
+      toggleInputLabel.appendChild(toggleInputCheckbox);
     
-    const toggleInputSpan = document.createElement('span');
-    toggleInputSpan.classList.add('checkboxToggleSwitch');
-    toggleInputLabel.appendChild(toggleInputSpan);    
+      const toggleInputSpan = document.createElement('span');
+        toggleInputSpan.classList.add('checkboxToggleSwitch');
+      toggleInputLabel.appendChild(toggleInputSpan);    
 
-    const toggleInputStyles = document.createElement('style');
-    toggleInputStyles.textContent = '';
-    toggleInputStyles.textContent += 'p {';
-    toggleInputStyles.textContent += 'color: red;';
-    toggleInputStyles.textContent += '}';
+      const toggleInputStyles = document.createElement('style');
+      toggleInputStyles.textContent = '';
+      toggleInputStyles.textContent += 'p {';
+      toggleInputStyles.textContent += 'color: red;';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggle {';
-    toggleInputStyles.textContent += '--toggle-width: 60px;';
-    toggleInputStyles.textContent += '--toggle-height: 34px;';
-    toggleInputStyles.textContent += '--toggle-padding: 1px;';
-    toggleInputStyles.textContent += '--switch-height: calc(var(--toggle-height) - (var(--toggle-padding) * 4));';
-    toggleInputStyles.textContent += '--switch-slide: calc(var(--toggle-width) - var(--switch-height) - (var(--toggle-padding) * 4) + 3px);';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggle {';
+      toggleInputStyles.textContent += '--toggle-width: 60px;';
+      toggleInputStyles.textContent += '--toggle-height: 34px;';
+      toggleInputStyles.textContent += '--toggle-padding: 1px;';
+      toggleInputStyles.textContent += '--switch-height: calc(var(--toggle-height) - (var(--toggle-padding) * 4));';
+      toggleInputStyles.textContent += '--switch-slide: calc(var(--toggle-width) - var(--switch-height) - (var(--toggle-padding) * 4) + 3px);';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggle input[type="checkbox"] {';
-    toggleInputStyles.textContent += 'display: none;';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggle input[type="checkbox"] {';
+      toggleInputStyles.textContent += 'display: none;';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggle,';
-    toggleInputStyles.textContent += '.checkboxToggleSwitch {';
-    toggleInputStyles.textContent += 'position: relative;';
-    toggleInputStyles.textContent += 'display: flex;';
-    toggleInputStyles.textContent += 'align-items: center;';
-    toggleInputStyles.textContent += 'width: var(--toggle-width);';
-    toggleInputStyles.textContent += 'height: var(--toggle-height);';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggle,';
+      toggleInputStyles.textContent += '.checkboxToggleSwitch {';
+      toggleInputStyles.textContent += 'position: relative;';
+      toggleInputStyles.textContent += 'display: flex;';
+      toggleInputStyles.textContent += 'align-items: center;';
+      toggleInputStyles.textContent += 'width: var(--toggle-width);';
+      toggleInputStyles.textContent += 'height: var(--toggle-height);';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggleSwitch {';
-    toggleInputStyles.textContent += 'height: var(--switch-height);';
-    toggleInputStyles.textContent += 'background-color: #ccc;';
-    toggleInputStyles.textContent += 'border-radius: var(--toggle-height);';
-    toggleInputStyles.textContent += 'cursor: pointer;';
-    toggleInputStyles.textContent += 'border: 1px solid rgba(0, 0, 0, 0.1);';
-    toggleInputStyles.textContent += 'box-shadow: 0 0 2px rgba(191, 191, 191, 1);';
-    toggleInputStyles.textContent += 'transition: all 0.4s ease-out;';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggleSwitch {';
+      toggleInputStyles.textContent += 'height: var(--switch-height);';
+      toggleInputStyles.textContent += 'background-color: #ccc;';
+      toggleInputStyles.textContent += 'border-radius: var(--toggle-height);';
+      toggleInputStyles.textContent += 'cursor: pointer;';
+      toggleInputStyles.textContent += 'border: 1px solid rgba(0, 0, 0, 0.1);';
+      toggleInputStyles.textContent += 'box-shadow: 0 0 2px rgba(191, 191, 191, 1);';
+      toggleInputStyles.textContent += 'transition: all 0.4s ease-out;';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggleSwitch:hover {';
-    toggleInputStyles.textContent += 'border: 1px solid rgba(191, 0, 0, 0.5);';
-    toggleInputStyles.textContent += 'box-shadow: 0 0 2px rgba(191, 0, 0, 0.5);';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggleSwitch:hover {';
+      toggleInputStyles.textContent += 'border: 1px solid rgba(191, 0, 0, 0.5);';
+      toggleInputStyles.textContent += 'box-shadow: 0 0 2px rgba(191, 0, 0, 0.5);';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggleSwitch::before {';
-    toggleInputStyles.textContent += 'content: \'\';';
-    toggleInputStyles.textContent += 'width: var(--switch-height);';
-    toggleInputStyles.textContent += 'height: var(--switch-height);';
-    toggleInputStyles.textContent += 'margin-left: 0;';
-    toggleInputStyles.textContent += 'background-color: rgb(255, 255, 255);';
-    toggleInputStyles.textContent += 'border: 2px solid rgba(0, 0, 0, 0.3);';
-    toggleInputStyles.textContent += 'border-radius: 50%;';
-    toggleInputStyles.textContent += 'box-sizing: border-box;';
-    toggleInputStyles.textContent += 'transition: all 0.4s ease-out;';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggleSwitch::before {';
+      toggleInputStyles.textContent += 'content: \'\';';
+      toggleInputStyles.textContent += 'width: var(--switch-height);';
+      toggleInputStyles.textContent += 'height: var(--switch-height);';
+      toggleInputStyles.textContent += 'margin-left: 0;';
+      toggleInputStyles.textContent += 'background-color: rgb(255, 255, 255);';
+      toggleInputStyles.textContent += 'border: 2px solid rgba(0, 0, 0, 0.3);';
+      toggleInputStyles.textContent += 'border-radius: 50%;';
+      toggleInputStyles.textContent += 'box-sizing: border-box;';
+      toggleInputStyles.textContent += 'transition: all 0.4s ease-out;';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggleSwitch:hover::before {';
-    toggleInputStyles.textContent += 'border: 2px solid rgba(191, 0, 0, 0.5);';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggleSwitch:hover::before {';
+      toggleInputStyles.textContent += 'border: 2px solid rgba(191, 0, 0, 0.5);';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch {';
-    toggleInputStyles.textContent += 'background-color: rgb(255, 0, 0);';
-    toggleInputStyles.textContent += 'border: 1px solid rgba(229, 0, 0, 1);';
-    toggleInputStyles.textContent += 'box-shadow: 0 0 2px rgba(191, 0, 0, 1);';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch {';
+      toggleInputStyles.textContent += 'background-color: rgb(255, 0, 0);';
+      toggleInputStyles.textContent += 'border: 1px solid rgba(229, 0, 0, 1);';
+      toggleInputStyles.textContent += 'box-shadow: 0 0 2px rgba(191, 0, 0, 1);';
+      toggleInputStyles.textContent += '}';
 
-    toggleInputStyles.textContent += '.checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch::before {';
-    toggleInputStyles.textContent += 'transform: translateX(var(--switch-slide));';
-    toggleInputStyles.textContent += 'border: 2px solid rgba(229, 0, 0, 1);';
-    toggleInputStyles.textContent += '}';
+      toggleInputStyles.textContent += '.checkboxToggle input[type="checkbox"]:checked + .checkboxToggleSwitch::before {';
+      toggleInputStyles.textContent += 'transform: translateX(var(--switch-slide));';
+      toggleInputStyles.textContent += 'border: 2px solid rgba(229, 0, 0, 1);';
+      toggleInputStyles.textContent += '}';
 
-    this.shadowRoot.appendChild(toggleInputStyles);
-    this.shadowRoot.appendChild(toggleInputLabel);
-    
-    
-    // INITIALISE TOGGLE POSITION ACCORDING TO INITIAL VALUE OF position="" ATTRIBUTE
-    const initialiseTogglePosition = () => {
-    
-      const initialPosition = this.getAttribute('position');
-      toggleInputCheckbox.checked = (initialPosition === 'on') ? true : false;
-    }
-    
-    window.addEventListener('load', initialiseTogglePosition, false);
-    
-    
-    // UPDATE position="" ATTRIBUTE VALUE WHENEVER CHECKBOX IS CHECKED OR UNCHECKED 
-    const updatePositionAttribute = () => {
-    
-      const currentPosition = this.getAttribute('position');
-      const newPosition = (currentPosition === 'off') ? 'on' : 'off';
-      this.setAttribute('position', newPosition);
-    }
-    
-    toggleInputCheckbox.addEventListener('change', updatePositionAttribute, false);
+      this.shadowRoot.appendChild(toggleInputStyles);
+      this.shadowRoot.appendChild(toggleInputLabel);
+
+      
+      // INITIALISE TOGGLE POSITION ACCORDING TO INITIAL VALUE OF position="" ATTRIBUTE
+      const initialiseTogglePosition = () => {
+      
+        const initialPosition = this.getAttribute('position');
+        toggleInputCheckbox.checked = (initialPosition === 'on') ? true : false;
+      }
+      
+      window.addEventListener('load', initialiseTogglePosition, false);
+      
+      
+      // UPDATE position="" ATTRIBUTE VALUE WHENEVER CHECKBOX IS CHECKED OR UNCHECKED 
+      const updatePositionAttribute = () => {
+      
+        const currentPosition = this.getAttribute('position');
+        const newPosition = (currentPosition === 'off') ? 'on' : 'off';
+        this.setAttribute('position', newPosition);
+      }
+      
+      toggleInputCheckbox.addEventListener('change', updatePositionAttribute, false);
+    };
+
+    renderShadow();
   }
   
   
