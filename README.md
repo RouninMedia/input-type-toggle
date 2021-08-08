@@ -148,7 +148,9 @@ class toggleInput_Element extends HTMLElement {
   static get observedAttributes() { return ['position']; }
 
   attributeChangedCallback(name, oldValue, newValue) {
-   
+    
+    this[name] = newValue;
+    
     if (oldValue !== null) {
     
       this.shadowRoot.querySelector('input[type="checkbox"]').checked = (newValue === 'on') ? true : false;
