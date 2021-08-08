@@ -27,6 +27,13 @@ One significant advantage of the **WebComponent Version** is that the initial `p
 <p class="description">The <code>&lt;toggle-input&gt;</code> is currently switched <strong data-toggle-position="off">off</strong>.</p>
 ```
 
+#### CSS
+```CSS
+button {
+  margin: 12px 0;
+}
+```
+
 #### Javascript
 ```javascript
 class toggleInput_Element extends HTMLElement {
