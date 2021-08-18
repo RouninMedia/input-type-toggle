@@ -326,3 +326,9 @@ const reviewCheckboxStatus = () => {
 
 toggleCheckbox.addEventListener('click', reviewCheckboxStatus, false);
 ```
+
+_________
+
+ - [**Building a switch component**](https://web.dev/building-a-switch-component/) by *Adam Argyle*
+
+A foundational overview of how to build a responsive and accessible switch component.
