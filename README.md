@@ -329,6 +329,10 @@ toggleCheckbox.addEventListener('click', reviewCheckboxStatus, false);
 
 _________
 
+## Unrelated but Similar Projects by Other Developers
+
+The projects below are unrelated to Rounin Media's `<input type="toggle">` but may also interest the reader:
+
  - [**Building a switch component**](https://web.dev/building-a-switch-component/) by *Adam Argyle*
 
-A foundational overview of how to build a responsive and accessible switch component.
+*A foundational overview of how to build a responsive and accessible switch component.*
